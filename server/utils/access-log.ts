@@ -34,7 +34,7 @@ export const blobsMap = {
   blob13: 'browserType',
   blob14: 'device',
   blob15: 'deviceType',
-  blob16: 'utm_source',
+  blob16: 'utmSource',
 } as const
 
 export type BlobsMap = typeof blobsMap
@@ -108,7 +108,7 @@ export function useAccessLog(event: H3Event) {
     browserType: uaInfo?.browser?.type,
     device: uaInfo?.device?.model,
     deviceType: uaInfo?.device?.type,
-    utm_source: utmSource,
+    utmSource,
   }
 
   if (process.env.NODE_ENV === 'production') {

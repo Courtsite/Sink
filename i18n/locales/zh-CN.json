@@ -136,7 +136,8 @@
       "deviceType": "设备类型",
       "os": "操作系统",
       "browser": "浏览器",
-      "browserType": "浏览器类型"
+      "browserType": "浏览器类型",
+      "utmSource": "流量来源"
     }
   },
   "links": {
