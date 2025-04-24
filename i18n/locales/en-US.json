@@ -136,7 +136,8 @@
       "deviceType": "Device Type",
       "os": "OS",
       "browser": "Browser",
-      "browserType": "Browser Type"
+      "browserType": "Browser Type",
+      "utmSource": "UTM Source"
     }
   },
   "links": {
