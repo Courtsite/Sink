@@ -125,7 +125,6 @@ function copyLink() {
             <PopoverContent>
               <DashboardLinksQRCode
                 :data="shortLink"
-                :image="linkIcon"
               />
             </PopoverContent>
           </Popover>
