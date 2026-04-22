@@ -190,7 +190,8 @@
       "deviceType": "Loại thiết bị",
       "os": "Hệ điều hành",
       "browser": "Trình duyệt",
-      "browserType": "Loại trình duyệt"
+      "browserType": "Loại trình duyệt",
+      "utmSource": "Nguồn UTM"
     },
     "time_picker": {
       "today": "Hôm nay",

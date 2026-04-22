@@ -190,7 +190,8 @@
       "deviceType": "Tipo de dispositivo",
       "os": "SO",
       "browser": "Browser",
-      "browserType": "Tipo de browser"
+      "browserType": "Tipo de browser",
+      "utmSource": "Fonte UTM"
     },
     "time_picker": {
       "today": "Hoje",

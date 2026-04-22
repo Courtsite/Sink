@@ -35,6 +35,7 @@ export const blobsMap = {
   blob14: 'device',
   blob15: 'deviceType',
   blob16: 'COLO',
+  blob17: 'utmSource',
 } as const
 
 export const doublesMap = {
@@ -114,6 +115,9 @@ export function useAccessLog(event: H3Event) {
   const { request: { cf }, env } = cloudflare
   const link = event.context.link || {}
 
+  const fullUrl = getRequestURL(event)
+  const utmSource = fullUrl.searchParams.get('utm_source') || ''
+
   const isBot = cf?.botManagement?.verifiedBot
     || ['crawler', 'fetcher'].includes(uaInfo?.browser?.type || '')
     || ['spider', 'bot'].includes(uaInfo?.browser?.name?.toLowerCase() || '')
@@ -143,6 +147,7 @@ export function useAccessLog(event: H3Event) {
     device: uaInfo?.device?.model,
     deviceType: uaInfo?.device?.type,
     COLO: cf?.colo,
+    utmSource,
 
     // For RealTime Globe
     latitude: Number(cf?.latitude || getHeader(event, 'cf-iplatitude') || 0),
